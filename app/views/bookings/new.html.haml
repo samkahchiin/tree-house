@@ -3,21 +3,13 @@
 %div#booking-form
   = form_for Booking.new do |f|
     .form-group
-      = f.label :first_name
+      = f.label :name
       %br
-      = f.text_field :first_name , :required => true
+      = f.text_field :name , :required => true
     .form-group
-      = f.label :last_name
+      = f.label :mobile
       %br
-      = f.text_field :last_name , :required => true
-    .form-group
-      = f.label :identification_no
-      %br
-      = f.text_field :identification_no , :required => true
-    .form-group
-      = f.label :phone_no
-      %br
-      = f.phone_field :phone_no , :required => true
+      = f.phone_field :mobile , :required => true
     .form-group
       = f.label :email
       %br
