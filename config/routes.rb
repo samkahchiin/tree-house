@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/create'
-
+  resources :bookings, only: [:new, :create]
   root 'bookings#new'
 end

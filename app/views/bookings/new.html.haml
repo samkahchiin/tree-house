@@ -1,2 +1,25 @@
-%h1 Bookings#new
-%p Find me in app/views/bookings/new.html.haml
+%h1 Booking Page
+
+%div#booking-form
+  = form_for Booking.new do |f|
+    .form-group
+      = f.label :first_name
+      %br
+      = f.text_field :first_name , :required => true
+    .form-group
+      = f.label :last_name
+      %br
+      = f.text_field :last_name , :required => true
+    .form-group
+      = f.text_field :identification_no
+      %br
+      = f.text_field :identification_no , :required => true
+    .form-group
+      = f.label :phone_no
+      %br
+      = f.phone_field :phone_no , :required => true
+    .form-group
+      = f.label :email
+      %br
+      = f.email_field :email , :required => true
+    = f.submit('Book Now!', class: "btn btn-success")
