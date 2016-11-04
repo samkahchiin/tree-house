@@ -3,9 +3,9 @@ Billplz.configure do |config|
 end
 
 Billplz::Collection.module_eval do
-  self.api_url = ENV['BILLPLZ_API'] + '/api/v3/collections'
+  self.api_url = ENV['BILLPLZ_API'] + '/api/v2/collections'
 end
 
 Billplz::Bill.module_eval do
-  self.api_url = ENV['BILLPLZ_API'] + '/api/v3/bills'
+  self.api_url = ENV['BILLPLZ_API'] + '/api/v2/bills'
 end
