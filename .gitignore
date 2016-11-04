@@ -16,5 +16,6 @@
 !/log/.keep
 /tmp
 
+/.story_branch
 # Ignore application configuration
 /config/application.yml
