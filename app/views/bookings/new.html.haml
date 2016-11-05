@@ -1,17 +1,30 @@
-%h1 Booking Page
+.container
+  %h1 Booking Page
 
-%div#booking-form
-  = form_tag '/bookings', method: 'post'  do
-    .form-group
-      = label_tag :name
-      %br
-      = text_field_tag :name , nil, required: true
-    .form-group
-      = label_tag :mobile, 'mobile phone no (format is +601XXXXXXXX OR 601XXXXXXXX)'
-      %br
-      = phone_field_tag :mobile , nil, required: true, pattern: '^(\+?)(601)(\d{8})$'
-    .form-group
-      = label_tag :email
-      %br
-      = email_field_tag :email , nil, required: true
-    = submit_tag('Book Now!', class: "btn btn-success")
+  %div#booking-form
+    = form_tag '/bookings', method: 'post'  do
+      .form-group
+        = label_tag :name
+        %br
+        = text_field_tag :name , nil, required: true
+      .form-group
+        = label_tag :mobile, 'mobile phone no (format is +601XXXXXXXX OR 601XXXXXXXX)'
+        %br
+        = phone_field_tag :mobile , nil, required: true, pattern: '^(\+?)(601)(\d{8})$'
+      .form-group
+        = label_tag :email
+        %br
+        = email_field_tag :email , nil, required: true
+      .form-group
+        = label_tag :date
+        %br
+        = text_field_tag :date, nil, class: 'datepicker'
+      .form-group
+        = label_tag :no_of_adults
+        %br
+        = select_tag :no_of_adults, options_for_select(1..16), :style => "width:50%;"
+      .form-group
+        = label_tag :no_of_children
+        %br
+        = select_tag :no_of_children, options_for_select(1..16), :style => "width:50%;"
+      = submit_tag('Book Now!', class: "btn btn-success")

@@ -11,7 +11,11 @@ class BookingsController < ApplicationController
     # after this
     # OR
     # Consider to utilize the booking model to store all the data
-    description = 'Tree house booking'
+    date = booking_params[:date]
+    no_of_adults = booking_params[:no_of_adults]
+    no_of_children = booking_params[:no_of_children]
+
+    description = "Tree house booking on #{date} for #{no_of_adults} adult(s) and #{no_of_children} child(ren)"
     callback_url = request.base_url
     extra_attributes = { description: description, collection_id: ENV['COLLECTION_ID'], amount: amount, callback_url: callback_url }
     bill_params = booking_params.merge extra_attributes
@@ -35,6 +39,6 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.permit(:name, :mobile, :email)
+    params.permit(:name, :mobile, :email, :date, :no_of_adults, :no_of_children)
   end
 end
