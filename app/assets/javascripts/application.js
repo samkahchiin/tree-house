@@ -15,7 +15,5 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require turbolinks
+//= require booking
 //= require_tree .
-
-$ ->
-  $('.datepicker').datepicker()
