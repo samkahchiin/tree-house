@@ -16,7 +16,7 @@
       = email_field_tag :email , nil, required: true
     .form-group
       = label_tag :date
-      %input.datepicker
+      = text_field_tag :date, nil, class: 'datepicker'
     .form-group
       = label_tag :no_of_adults
       = select_tag :no_of_adults, options_for_select(1..16), :style => "width:50%;"
