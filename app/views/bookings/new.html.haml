@@ -15,5 +15,12 @@
       %br
       = email_field_tag :email , nil, required: true
     .form-group
+      = label_tag :date
       %input.datepicker
+    .form-group
+      = label_tag :no_of_adults
+      = select_tag :no_of_adults, options_for_select(1..16), :style => "width:50%;"
+    .form-group
+      = label_tag :no_of_children
+      = select_tag :no_of_children, options_for_select(1..16), :style => "width:50%;"
     = submit_tag('Book Now!', class: "btn btn-success")

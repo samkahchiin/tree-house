@@ -1,2 +1,4 @@
 $ ->
-  $('.datepicker').datepicker()
+  $('.datepicker').datepicker
+    minDate: new Date()
+
