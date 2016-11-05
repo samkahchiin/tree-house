@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+/.byebug_history
+/.story_branch
+# Ignore application configuration
+/config/application.yml

@@ -1,25 +1,17 @@
 %h1 Booking Page
 
 %div#booking-form
-  = form_for Booking.new do |f|
+  = form_tag '/bookings', method: 'post'  do
     .form-group
-      = f.label :first_name
+      = label_tag :name
       %br
-      = f.text_field :first_name , :required => true
+      = text_field_tag :name , nil, required: true
     .form-group
-      = f.label :last_name
+      = label_tag :mobile, 'mobile phone no (format is +601XXXXXXXX OR 601XXXXXXXX)'
       %br
-      = f.text_field :last_name , :required => true
+      = phone_field_tag :mobile , nil, required: true, pattern: '^(\+?)(601)(\d{8})$'
     .form-group
-      = f.text_field :identification_no
+      = label_tag :email
       %br
-      = f.text_field :identification_no , :required => true
-    .form-group
-      = f.label :phone_no
-      %br
-      = f.phone_field :phone_no , :required => true
-    .form-group
-      = f.label :email
-      %br
-      = f.email_field :email , :required => true
-    = f.submit('Book Now!', class: "btn btn-success")
+      = email_field_tag :email , nil, required: true
+    = submit_tag('Book Now!', class: "btn btn-success")
