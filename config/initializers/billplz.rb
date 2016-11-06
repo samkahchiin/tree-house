@@ -12,13 +12,7 @@ Billplz::Bill.module_eval do
   def get
     requires!(@payload, :bill_id)
     @api_url = "#{@api_url}/#{@payload[:bill_id]}"
-    headers = {
-        "Authorization" => "Basic " + Base64.encode64(Billplz.configuration.api_key + ":").strip,
-        "Content-Type"  => "application/json",
-        "Accept"        => "application/json"
-    }
-    endpoint =  URI.parse(@api_url)
-    @response = http.get(endpoint.request_uri, headers)
-    JSON.parse @response.body if @response.is_a?(Net::HTTPOK)
+    request(:get, nil)
+    JSON.parse(@response.body) if success?
   end
 end
