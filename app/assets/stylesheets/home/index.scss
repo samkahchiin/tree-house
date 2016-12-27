@@ -3528,6 +3528,10 @@
 
 		}
 
+/* Gallery */
+  #links img.treehouse-pic {
+    width: 100%;
+  }
 /* Sidebar */
 
 	#search form {
@@ -3811,19 +3815,7 @@
 			text-align: right;
 		}
 
-		@media screen and (max-width: 1680px) {
-
-			#header {
-				padding-top: 5em;
-			}
-
-		}
-
 		@media screen and (max-width: 736px) {
-
-			#header {
-				padding-top: 6.5em;
-			}
 
 				#header .logo {
 					font-size: 1.25em;
