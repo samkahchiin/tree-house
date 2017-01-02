@@ -3821,11 +3821,11 @@
       a {
         color: black;
         outline: none;
-        cursor: default;
         margin-left: 1em;
         margin-right: 1em;
       }
       a:hover {
+        cursor: default;
         color: #f56a6a;
         text-decoration: none;
         font-weight: 800;
