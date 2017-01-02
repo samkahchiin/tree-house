@@ -20,3 +20,8 @@
 /.story_branch
 # Ignore application configuration
 /config/application.yml
+
+.DS_Store
+.gitignore
+/app/.DS_Store
+/app/assets/.DS_Store
