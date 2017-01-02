@@ -1,25 +1,7 @@
 #wrapper
   #main
     .inner
-      %header#header
-        %a.logo{:href => "#"}
-          = image_tag "treehouse"
-        %ul.icons
-          %li
-            %a.icon.fa-twitter{:href => "#"}
-              %span.label Twitter
-          %li
-            %a.icon.fa-facebook{:href => "#"}
-              %span.label Facebook
-          %li
-            %a.icon.fa-snapchat-ghost{:href => "#"}
-              %span.label Snapchat
-          %li
-            %a.icon.fa-instagram{:href => "#"}
-              %span.label Instagram
-          %li
-            %a.icon.fa-medium{:href => "#"}
-              %span.label Medium
+      = render "home/shared/header"
       / Content
       .content
         %header
@@ -68,20 +50,7 @@
 
         %hr.major
         %h2 照片
-        #links
-          .row
-            .col-md-3.col-xs-6
-              %a{:href => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg", :title => "bed"}
-                %img.treehouse-pic{:alt => "Bed", :src => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg"}
-            .col-md-3.col-xs-6
-              %a{:href => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg", :title => "window"}
-                %img.treehouse-pic{:alt => "Treehouse", :src => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
-            .col-md-3.col-xs-6
-              %a{:href => "http://res.cloudinary.com/samkahchiin/image/upload/v1481643305/1_vjelzy.jpg", :title => "hall"}
-                %img.treehouse-pic{:alt => "Hall", :src => "http://res.cloudinary.com/samkahchiin/image/upload/v1481643305/1_vjelzy.jpg"}
-            .col-md-3.col-xs-6
-              %a{:href => "http://res.cloudinary.com/samkahchiin/image/upload/v1481643280/4_drv482.jpg", :title => "toilet"}
-                %img.treehouse-pic{:alt => "Bathroom", :src => "http://res.cloudinary.com/samkahchiin/image/upload/v1481643280/4_drv482.jpg"}
+        = render "home/shared/photo"
 
         %hr.major
         %h2 雨林樹屋咨詢
@@ -105,39 +74,6 @@
               %li +6010-2466123  Michelle
               %li +6016-7560086  玉如
 
-#blueimp-gallery.blueimp-gallery
-  .slides
-  %h3.title
-  %a.prev ‹
-  %a.next ›
-  %a.close ×
-  %a.play-pause
-  %ol.indicator
-
-:javascript
-  function initMap() {
-    var mapCanvas = document.getElementById('map');
-    var treehouse = { lat: 1.5904932, lng: 103.516292 };
-    var mapOptions = {
-      center: treehouse,
-      zoom: 15
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var marker = new google.maps.Marker({
-      position: treehouse,
-      map: map
-    });
-  }
-
-%script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3km2EhmwnSgkQTxowIOAdns6Q4AuF-6w&callback=initMap"}
-
-:javascript
-  document.getElementById('links').onclick = function (event) {
-      event = event || window.event;
-      var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = {index: link, event: event},
-          links = this.getElementsByTagName('a');
-      blueimp.Gallery(links, options);
-  };
+= render "home/shared/gallery_plugin"
+= render "home/shared/google_map_plugin"
 
