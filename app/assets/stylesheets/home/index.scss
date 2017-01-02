@@ -2270,12 +2270,9 @@
 	}
 
 	header p {
-		font-family: "Roboto Slab", serif;
 		font-size: 1em;
 		font-weight: 400;
-		letter-spacing: 0.075em;
 		margin-top: -0.5em;
-		text-transform: uppercase;
 	}
 
 	header.major > :last-child {
@@ -3816,6 +3813,28 @@
 		#header .icons {
 			text-align: right;
 		}
+
+		#header .languages {
+      #english {
+        text-align: right;
+      }
+      a {
+        color: black;
+        outline: none;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+      a:hover {
+        cursor: default;
+        color: #f56a6a;
+        text-decoration: none;
+        font-weight: 800;
+      }
+		}
+
+    .languages#mandarin {
+      border-right: 1px solid #000000;
+    }
 
 		@media screen and (max-width: 1680px) {
 

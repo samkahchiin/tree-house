@@ -1,10 +1,19 @@
 %header#header
-  %a.logo{:href => "#"}
-    = image_tag "treehouse"
-  %ul.icons
-    %li
-      %a.icon.fa-facebook{:href => "https://www.facebook.com/rainforest.treehouse.johor/"}
-        %span.label Facebook
-    %li
-      %a.icon.fa-instagram{:href => "https://www.instagram.com/explore/tags/rainforesttreehouse/"}
-        %span.label Instagram
+  .row
+    .col-md-3
+      %a.logo{:href => "#"}
+        = image_tag "treehouse"
+    .col-md-7
+    .col-md-1
+      %ul.icons
+        %li
+          %a.icon.fa-facebook{:href => "https://www.facebook.com/rainforest.treehouse.johor/"}
+            %span.label Facebook
+        %li
+          %a.icon.fa-instagram{:href => "https://www.instagram.com/explore/tags/rainforesttreehouse/"}
+            %span.label Instagram
+    .col-md-1
+      .languages
+        = link_to "中文", "/cn"
+        = link_to "English", "/en"
+

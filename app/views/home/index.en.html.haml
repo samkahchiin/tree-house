@@ -1,0 +1,81 @@
+#wrapper
+  #main
+    .inner
+      = render "home/shared/header"
+      / Content
+      .content
+        %header
+          %h1 Gunung Pulai - Rainforest Tree House
+
+      %section
+        %span.image.main
+          %img.treehouse-pic{:alt => "Bed", :src => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg"}
+        %header.main
+          %h1 About the treehouse ...
+          %br
+          %p Situated at Gunung Pulai in Johor Bahru, you only need 20 minutes to get out of the hustle of the city - back to beautiful nature. Six tree houses, built out of sweat and blood of the owner Ah Yao, sit silently up in trees. 10 min mountain walking distance to the 1st tree house (about 300 stair steps).
+          %p Amenities include: power plug, mosquito net, blanket, cotton pillow, comfortable mattress bathroom with cold stream water shower and toilet bowl.
+        %hr.major
+        %h2 Fee
+        %p For 4pax and above in 1 house
+        %p (2d1n):Rm100/adult, Rm60/kid(with 2 vege meal);
+        %p (3d2n) : rm180/adult , rm100/kids (with 5 vege meal)
+        %p a treehouse minimum charge is Rm260.
+        %p We have
+        %ul
+          %li 4 small tree house {Small tree house can fix 6 pax for (max)}
+          %li 3 big tree house {Big tree house can fix 12 pax (max)}
+        %p We can also arrange activities like visit to bee farm + pineapple farm / river trekking + vertical rope drop and earth oven hand on pizza making with optional charge.
+        %p NOTE: Check in at about 2pm and check out at about 12 pm. (U can still stay at our hall and play at river after u check out)
+
+        %hr.major
+        %h2 Fee included:
+        %p 2d1n: 1 Dinner (simple vege steamboat) 1 breakfast (nasi lemak)
+        %p 3d2n: 2 Dinner, 2 breakfast, 1 lunch
+        %p Activity included :
+        %ul
+          %li Briefing of tree house concept (nature building ,organic farming etc )
+          %li Guide to jungle walk
+          %li Waterfall (waterfall trip will be cancel when rainy day or rainy seasons)
+
+        %hr.major
+        %h2 Things to bring:
+        %ul
+          %li Water bottle
+          %li Backpack,
+          %li Clothes (long pants to avoid insect)
+          %li Towel
+          %li Toiletries
+          %li Insect
+          %li Repellent
+          %li Umbrella (for back up use)
+
+        %hr.major
+        %h2 Photos
+        = render "home/shared/photo"
+
+        %hr.major
+        %h2 Enquiry
+        .row
+          .col-md-6.col-xs-12
+            #map{:style => "width:100%;height:300px"}
+          .col-md-6.col-xs-12
+            %p
+              %strong Address
+            %p Jalan air terjun , kg sri gunung pulai
+            %p
+              %strong How to get here :
+            %p turn right after 50m from kulai tol,
+            %p you'll see a brown coloured signboard: Homestay Gunung pulai after 10km
+            %p turn left, you'll then reach at kampung area
+            %p go straight for around 1km then you'll see tree house on your left hand side.
+            %p
+              %strong Contacts
+            %p Feel free to call this no if there is anything:
+            %ul
+              %li +6016-3823145  Star Lim
+              %li +6010-2466123  Michelle
+              %li +6016-7560086  Yu Ru
+
+= render "home/shared/gallery_plugin"
+= render "home/shared/google_map_plugin"
