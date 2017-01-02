@@ -1,0 +1,79 @@
+#wrapper
+  #main
+    .inner
+      = render "home/shared/header"
+      / Content
+      .content
+        %header
+          %h1 蒲莱山- 雨林樹屋
+
+      %section
+        %span.image.main
+          %img.treehouse-pic{:alt => "Bed", :src => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg"}
+        %header.main
+          %h1 緣起
+          %br
+          %p 抱著結合有機生活及休閑旅遊的想法，老闆在柔佛古來的埔萊山（Gunung Pulai）外圍租下一片林，在林地裏的樹上蓋屋子，創立了「雨林樹屋」（Rainforest Tree House）， 希望能透過體驗式教育讓習慣了城市生活的人接近自然，學習與環境和平共處。
+          %p 大概走上10分鐘的山路（大約有300個梯級）就會抵達第一間樹屋。目前樹屋區只占有六間各具不同特色的樹屋，都以雙層建築而造。你可以從木梯爬行而上，便進入了寬尚遼闊的樹屋裏。此外，樹屋區的中心還有一間可容易60人的大禮堂，裏頭有著許多捕夢網的裝飾，還備有吊床。
+          %p 樹屋的簡單設施包括：電插座、蚊網、床，被單、枕頭；沖涼房備有馬桶、洗臉盆和花灑。 沖涼房的水都來自純淨的山水，所以會有沁涼的感覺哦。
+        %hr.major
+        %h2 費用
+        %p 四人或以上（一間小樹屋）（大樹屋需要八個人以上）
+        %p 2天1夜：成人 RM100/人；小孩RM60/人；
+        %p 3天2夜：成人 rm180/人 ，小孩rm100/人
+        %p 4天3夜：成人 rm240/人 ，小孩rm140/人
+        %p 若想兩個人或單獨住一間樹屋，則一間樹屋收費RM260/間。
+        %p 我們也很樂意為大家安排一些額外的活動，例如：參觀黃梨園 / 溯溪 + 垂降。這些活動另外收費，如果有興趣的話可以提早預約。
+
+        %p 注：2pm入住，12pm退房。
+        %hr.major
+        %h2 費用包括
+        %ul
+          %li 1晚餐（素食火鍋）
+          %li 1早餐（椰漿飯）
+          %li 樹屋介紹
+          %li 森林步行
+          %li 瀑布行
+          %li 蜜蜂生態講解 （含解說員）
+        %hr.major
+        %h2 需帶物品
+        %ul
+          %li 背包
+          %li 換洗衣物（長褲必帶以防蚊蟲）
+          %li 毛巾
+          %li 水瓶
+          %li 盥洗用具
+          %li 防蚊劑
+          %li 雨傘（以備不時之需）
+
+        %p 注：如果有帶外食請自行把垃圾帶回走。樹屋範圍嚴禁抽煙。
+
+        %hr.major
+        %h2 照片
+        = render "home/shared/photo"
+
+        %hr.major
+        %h2 雨林樹屋咨詢
+        .row
+          .col-md-6.col-xs-12
+            #map{:style => "width:100%;height:300px"}
+          .col-md-6.col-xs-12
+            %p
+              %strong 地址
+            %p Jalan air terjun , kg sri gunung pulai
+            %p
+              %strong 如何前往
+            %p 從Kulai Tol出來50米后，向右轉
+            %p 10公里后，你會看到一個褐色的牌子寫著：Homestay Gunung Pulai
+            %p 向左轉，你就會抵達甘榜區域
+            %p 向前直走大概1公里后，你就會看到奇特造型的樹屋門面，我們就在你左手邊
+            %p
+              %strong 聯絡
+            %ul
+              %li +6016-3823145  林星星
+              %li +6010-2466123  Michelle
+              %li +6016-7560086  玉如
+
+= render "home/shared/gallery_plugin"
+= render "home/shared/google_map_plugin"
+

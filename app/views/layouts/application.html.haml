@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1, user-scalable=no", :name => "viewport"}/
+    %meta{:charset => "utf-8"}/
+    %title TreeHouse
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.22.0/css/blueimp-gallery.min.css", :rel => "stylesheet"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}
+  %body
+    = yield
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.22.0/js/blueimp-gallery.min.js"}
+

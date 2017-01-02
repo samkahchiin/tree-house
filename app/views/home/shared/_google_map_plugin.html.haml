@@ -1,0 +1,17 @@
+:javascript
+  function initMap() {
+    var mapCanvas = document.getElementById('map');
+    var treehouse = { lat: 1.5904932, lng: 103.516292 };
+    var mapOptions = {
+      center: treehouse,
+      zoom: 15
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+      position: treehouse,
+      map: map
+    });
+  }
+
+%script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3km2EhmwnSgkQTxowIOAdns6Q4AuF-6w&callback=initMap"}
+

@@ -38,7 +38,20 @@ class BookingsController < ApplicationController
   end
 
   private
+
   def booking_params
     params.permit(:name, :mobile, :email, :date, :no_of_adults, :no_of_children)
+  end
+
+  def success_booking?
+    # Confirm how many rooms are available per day
+    # Validation on model side and client side
+    # how many children and adult are allowed per house
+    # Render error message if the booking is failing
+    #
+    # Form side:
+    # Added dropdown for house
+    # Added dropdown for children
+    # 
   end
 end
