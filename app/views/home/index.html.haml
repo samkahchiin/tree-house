@@ -2,8 +2,8 @@
   #main
     .inner
       %header#header
-        %a.logo{:href => "index.html"}
-          %strong 蒲莱山- 雨林樹屋
+        %a.logo{:href => "#"}
+          = image_tag "treehouse"
         %ul.icons
           %li
             %a.icon.fa-twitter{:href => "#"}
@@ -21,6 +21,10 @@
             %a.icon.fa-medium{:href => "#"}
               %span.label Medium
       / Content
+      .content
+        %header
+          %h1 蒲莱山- 雨林樹屋
+
       %section
         %span.image.main
           %img.treehouse-pic{:alt => "Bed", :src => "https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg"}
@@ -81,22 +85,25 @@
 
         %hr.major
         %h2 雨林樹屋咨詢
-        #map{:style => "width:100%;height:500px"}
-        %p
-          %strong 地址
-        %p Jalan air terjun , kg sri gunung pulai
-        %p
-          %strong 如何前往
-        %p 從Kulai Tol出來50米后，向右轉
-        %p 10公里后，你會看到一個褐色的牌子寫著：Homestay Gunung Pulai
-        %p 向左轉，你就會抵達甘榜區域
-        %p 向前直走大概1公里后，你就會看到奇特造型的樹屋門面，我們就在你左手邊
-        %p
-          %strong 聯絡
-        %ul
-          %li +6016-3823145  林星星
-          %li +6010-2466123  Michelle
-          %li +6016-7560086  玉如
+        .row
+          .col-md-6.col-xs-12
+            #map{:style => "width:100%;height:300px"}
+          .col-md-6.col-xs-12
+            %p
+              %strong 地址
+            %p Jalan air terjun , kg sri gunung pulai
+            %p
+              %strong 如何前往
+            %p 從Kulai Tol出來50米后，向右轉
+            %p 10公里后，你會看到一個褐色的牌子寫著：Homestay Gunung Pulai
+            %p 向左轉，你就會抵達甘榜區域
+            %p 向前直走大概1公里后，你就會看到奇特造型的樹屋門面，我們就在你左手邊
+            %p
+              %strong 聯絡
+            %ul
+              %li +6016-3823145  林星星
+              %li +6010-2466123  Michelle
+              %li +6016-7560086  玉如
 
 #blueimp-gallery.blueimp-gallery
   .slides
@@ -113,7 +120,7 @@
     var treehouse = { lat: 1.5904932, lng: 103.516292 };
     var mapOptions = {
       center: treehouse,
-      zoom: 18
+      zoom: 15
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
     var marker = new google.maps.Marker({
