@@ -14,6 +14,9 @@
 #= require jquery_ujs
 #= require jquery-ui
 #= require bootstrap-sprockets
+#= require jquery.scrollex.min
+#= require jquery.scrolly.min
+#= require util
 #= require turbolinks
 #= require bookings
 #= require_tree .
