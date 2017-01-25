@@ -1,6 +1,10 @@
 %header#header
   %nav
     %ul
+      %li.languages
+        = link_to "中文", "/cn"
+      %li.languages
+        = link_to "English", "/en"
       %li
         %a{:href => "#about"} About
       %li
@@ -11,9 +15,3 @@
         %a{:href => "#gallery"} Gallery
       %li
         %a{:href => "#contact"} Contact
-
-  .row
-    .col-md-1.col-xs-3
-      .languages
-        = link_to "中文", "/cn"
-        = link_to "English", "/en"

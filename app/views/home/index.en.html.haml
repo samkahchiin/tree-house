@@ -1,4 +1,20 @@
-= render "home/shared/header"
+%header#header
+  %nav
+    %ul
+      %li.languages
+        = link_to "中文", "/cn"
+      %li.languages
+        = link_to "English", "/en"
+      %li
+        %a{:href => "#about"} About
+      %li
+        %a{:href => "#fee"} Fee
+      %li
+        %a{:href => "#things-to-bring"} Things to bring
+      %li
+        %a{:href => "#gallery"} Gallery
+      %li
+        %a{:href => "#contact"} Contact
 / about
 %section#about.main.style1.dark.fullscreen
   .content
@@ -25,11 +41,11 @@
     %p
       %strong Activity included :
       %br
-      %i Briefing of tree house concept (nature building ,organic farming etc )
+      %i - Briefing of tree house concept (nature building ,organic farming etc )
       %br
-      %i Guide to jungle walk
+      %i - Guide to jungle walk
       %br
-      %i Waterfall (*waterfall trip will be cancel when rainy day or rainy seasons)
+      %i - Waterfall (*waterfall trip will be cancel when rainy day or rainy seasons)
     %p.note
       %strong NOTE:
       We can also arrange activities like visit to bee farm + pineapple farm / river trekking + vertical rope drop and earth oven hand on pizza making with optional charge.
@@ -46,21 +62,21 @@
   .content.box.style2
     %header
       %h2 Things to bring
-    %i Water bottle
-    %br/
-    %i Backpack
-    %br/
-    %i Clothes (long pants to avoid insect)
-    %br/
-    %i Towel
-    %br/
-    %i Toiletries
-    %br/
-    %i Insect
-    %br/
-    %i Repellent
-    %br/
-    %i Umbrella (for back up use)
+    %i - Water bottle
+    %br
+    %i - Backpack
+    %br
+    %i - Clothes (long pants to avoid insect)
+    %br
+    %i - Towel
+    %br
+    %i - Toiletries
+    %br
+    %i - Insect
+    %br
+    %i - Repellent
+    %br
+    %i - Umbrella (for back up use)
   %a.button.style2.down.anchored{:href => "#gallery"} Next
 
 / gallery
