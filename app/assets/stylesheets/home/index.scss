@@ -75,7 +75,6 @@
 
 	#contact {
 		overflow: hidden;
-		padding-bottom: 0;
 
 		.box {
 			@include vendor('transition', 'transform #{_duration(fade-in)} ease');
