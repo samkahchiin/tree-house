@@ -88,30 +88,7 @@
     %header
       %h2 照片
     / Gallery
-    .gallery
-      %article.from-left
-        %a.image.fit{:href => "images/fulls/01.jpg"}
-          %img{:alt => "", :src => "images/thumbs/01.jpg", :title => "The Anonymous Red"}/
-      %article.from-right
-        %a.image.fit{:href => "images/fulls/02.jpg"}
-          %img{:alt => "", :src => "images/thumbs/02.jpg", :title => "Airchitecture II"}/
-      %article.from-left
-        %a.image.fit{:href => "images/fulls/03.jpg"}
-          %img{:alt => "", :src => "images/thumbs/03.jpg", :title => "Air Lounge"}/
-      %article.from-right
-        %a.image.fit{:href => "images/fulls/04.jpg"}
-          %img{:alt => "", :src => "images/thumbs/04.jpg", :title => "Carry on"}/
-      %article.from-left
-        %a.image.fit{:href => "images/fulls/05.jpg"}
-          %img{:alt => "", :src => "images/thumbs/05.jpg", :title => "The sparkling shell"}/
-      %article.from-right
-        %a.image.fit{:href => "images/fulls/06.jpg"}
-          %img{:alt => "", :src => "images/thumbs/06.jpg", :title => "Bent IX"}/
-
-  -# .row
-  -#   .col-md-6.col-xs-12
-  -#     #map{:style => "width:100%;height:300px"}
-  -#   .col-md-6.col-xs-12
+    = render "home/shared/photo"
 
 %section#contact.main.style3.secondary
   .content
@@ -119,7 +96,7 @@
       %h2 咨詢
     .row
       .col-md-6.col-xs-12
-        #map{:style => "width:100%;height:300px"}
+        #map{:style => "width:100%;height:500px"}
       .col-md-6.col-xs-12
         %p
           %strong 地址
