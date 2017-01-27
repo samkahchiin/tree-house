@@ -44,6 +44,11 @@
 	@import 'layout/main';
 	@import 'layout/footer';
 
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+  }
+
 /* About */
 	#about {
 		background: url('https://res.cloudinary.com/samkahchiin/image/upload/v1481643291/5_osfdqx.jpg');

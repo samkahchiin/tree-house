@@ -1,0 +1,71 @@
+.select-style {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+  margin:3px;
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+
+.price-text {
+  text-align: left;
+}
+
+.total-price {
+  border-top: 2px solid #c1bbbb;
+  margin: 10px 0px;
+}
+
+.total-price-text {
+  float: left;
+}
+
+.total-price-amount {
+  float: right;
+}
+
+.booking .btn-danger {
+  float: right;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.datepicker.booking-date {
+  font-size: 0.8em !important;
+  margin: 10px 0px 0px;
+}
+
+.ui-datepicker {
+  font-size: 0.8em;
+}
+
+select option {
+  font-size: 0.8em;
+}
+
+@media (max-width: 736px) {
+  .room {
+    margin: 10px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .card-content {
+    padding: 15px;
+  }
+}

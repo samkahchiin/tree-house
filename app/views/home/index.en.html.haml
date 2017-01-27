@@ -87,6 +87,101 @@
     / Gallery
     = render "home/shared/photo"
 
+/ booking
+%section#booking.main.style3.primary
+  .content
+    %header
+      %h2 Booking
+    .row
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 4 Persons & Above in a Treehouse [2D1N]
+              %h4.card-text Max: 12
+            .row
+              .col-md-8
+                %h4.price-text RM100 Per Adult
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForMany, options: optionsForMany")
+            .row
+              .col-md-8
+                %h4.price-text RM60 Per Kid
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForMany, options: optionsForMany")
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 3 Persons in a Treehouse [2D1N]
+              %h4.card-text Max:3 
+            .row
+              .col-md-8
+                %h4.price-text RM110 Per Adult
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForThree, options: optionsForThree")
+            .row
+              .col-md-8
+                %h4.price-text RM60 Per Kid
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForThree, options: optionsForThree")
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 2 Persons & Below in a Treehouse [2D1N]
+              %h4.card-text Max: 2
+            .row
+              .col-md-8
+                %h4.price-text RM130 Per Adult
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForTwo, options: optionsForTwo")
+            .row
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 4 Persons & Above in a Treehouse [3D2N]
+              %h4.card-text Max: 12
+            .row
+              .col-md-8
+                %h4.price-text RM180 Per Adult
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForThreeDays, options: optionsForMany")
+            .row
+              .col-md-8
+                %h4.price-text RM100 Per Kid
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForThreeDays, options: optionsForMany")
+
+    .row.booking
+      .col-md-3.col-md-offset-9
+        .total-price
+          %span.total-price-text Total Price: RM
+          %span.total-price-amount(data-bind="text: price")
+
+    .row.booking-date-row
+      .col-md-3.col-md-offset-9
+        %input.datepicker.booking-date{type: "text", placeholder: "Your available date"}
+
+    .row.booking
+      .col-md-3.col-md-offset-9
+        .btn.btn-danger Book Now
+
 %section#contact.main.style3.secondary
   .content
     %header

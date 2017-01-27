@@ -18,5 +18,7 @@
 #= require jquery.scrolly.min
 #= require util
 #= require turbolinks
+#= require knockout
+#= require dropdowns
 #= require bookings
 #= require_tree .
