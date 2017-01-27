@@ -51,6 +51,10 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
+    @media (max-width: 736px) {
+      background-attachment: scroll;
+      background-position: center;
+    }
 	}
 
 /* Fee */
@@ -60,6 +64,10 @@
 		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+    @media (max-width: 736px) {
+      background-attachment: scroll;
+      background-position: center;
+    }
 	}
 
 /* things to bring */
@@ -69,6 +77,10 @@
 		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+    @media (max-width: 736px) {
+      background-attachment: scroll;
+      background-position: center;
+    }
 	}
 
 /* Contact */
