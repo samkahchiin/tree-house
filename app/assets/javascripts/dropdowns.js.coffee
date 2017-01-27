@@ -1,15 +1,19 @@
 class ViewModel
   constructor: ->
-    @noOfAdultsForMany      = ko.observable()
-    @noOfKidsForMany        = ko.observable()
+    @noOfAdultsForMany      = ko.observable(0)
+    @noOfKidsForMany        = ko.observable(0)
 
-    @noOfAdultsForThree     = ko.observable()
-    @noOfKidsForThree       = ko.observable()
+    @noOfAdultsForThree     = ko.observable(0)
+    @noOfKidsForThree       = ko.observable(0)
 
-    @noOfAdultsForTwo       = ko.observable()
+    @noOfAdultsForTwo       = ko.observable(0)
 
-    @noOfAdultsForThreeDays = ko.observable()
-    @noOfKidsForThreeDays   = ko.observable()
+    @noOfAdultsForThreeDays = ko.observable(0)
+    @noOfKidsForThreeDays   = ko.observable(0)
+
+    @optionsForMany  = [0..12]
+    @optionsForThree = [0..3]
+    @optionsForTwo   = [0..2]
 
     @price = ko.computed =>
       Number(@noOfAdultsForMany()) * 100 +
