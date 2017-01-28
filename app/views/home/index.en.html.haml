@@ -176,11 +176,11 @@
 
     .row.booking-date-row
       .col-md-3.col-md-offset-9
-        %input.datepicker.booking-date{type: "text", placeholder: "Your available date"}
+        %input.datepicker.booking-date{type: "text", placeholder: "Your available date", "data-bind": "value: availableDate"}
 
     .row.booking
       .col-md-3.col-md-offset-9
-        .btn.btn-danger Book Now
+        %button.btn.btn-danger(data-bind="enable: canBook, click: book") Book Now
 
 %section#contact.main.style3.secondary
   .content

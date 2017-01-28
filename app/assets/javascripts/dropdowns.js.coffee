@@ -15,6 +15,8 @@ class ViewModel
     @optionsForThree = [0..3]
     @optionsForTwo   = [0..2]
 
+    @availableDate = ko.observable()
+
     @price = ko.computed =>
       Number(@noOfAdultsForMany()) * 100 +
       Number(@noOfKidsForMany()) * 60 +
@@ -23,6 +25,12 @@ class ViewModel
       Number(@noOfAdultsForTwo()) * 130 +
       Number(@noOfAdultsForThreeDays()) * 180 +
       Number(@noOfKidsForThreeDays()) * 100
+
+    @canBook = ko.computed =>
+      @price() != 0 && @availableDate()
+
+  book: ->
+    console.log "book now"
 
 $(document).ready =>
   ko.applyBindings(new ViewModel())
