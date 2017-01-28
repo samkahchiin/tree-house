@@ -1,6 +1,4 @@
 .container
-  %h1 Booking Page
-
   %div#booking-form
     = form_tag "/bookings", method: "post"  do
       .form-group
@@ -25,4 +23,39 @@
             = label_tag :backup_date_2
             %br
             = text_field_tag :backup_date_2, nil, class: "datepicker", required: true
-      = submit_tag("Make Payment", class: "btn btn-success")
+
+      %input{type: "hidden", value: "#{@no_of_adults}", name: "no_of_adults"}
+      %input{type: "hidden", value: "#{@no_of_kids}", name: "no_of_kids"}
+      %input{type: "hidden", value: "#{@price}", name: "price"}
+      %input{type: "hidden", value: "#{@type}", name: "type"}
+      %input{type: "hidden", value: "#{@date}", name: "date"}
+
+      .row
+        .col-md-3.col-md-offset-9
+          .no-of-adults
+            %span.left-col No of adults:
+            %span.right-col= @no_of_adults
+      .row
+        .col-md-3.col-md-offset-9
+          .no-of-kids
+            %span.left-col No of kids:
+            %span.right-col= @no_of_kids
+      .row
+        .col-md-3.col-md-offset-9
+          .type
+            %span.left-col Type of stay:
+            %span.right-col= @type
+      .row
+        .col-md-3.col-md-offset-9
+          .type
+            %span.left-col Date:
+            %span.right-col= @date
+      .row
+        .col-md-3.col-md-offset-9
+          .total-price
+            %span.total-price-text.left-col Total Price: RM
+            %span.total-price-amount.right-col= @price
+
+      .row
+        .col-md-3.col-md-offset-9
+          = submit_tag("Make Payment", class: "btn btn-success")

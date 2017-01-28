@@ -56,9 +56,10 @@ class ViewModel
     noOfKids = [@noOfKidsForMany(), @noOfAdultsForThree(), @noOfKidsForThreeDays()]
     {
       price: @price()
-      noOfAdults: @sumOf noOfAdults
-      noOfKids: @sumOf noOfKids
+      no_of_adults: @sumOf noOfAdults
+      no_of_kids: @sumOf noOfKids
       type: @type()
+      date: @availableDate()
     }
 
 $(document).ready =>
