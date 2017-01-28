@@ -26,11 +26,40 @@ class ViewModel
       Number(@noOfAdultsForThreeDays()) * 180 +
       Number(@noOfKidsForThreeDays()) * 100
 
+    @type = ko.computed =>
+      type = []
+      twoDays = [@noOfAdultsForMany(), @noOfKidsForMany(), @noOfAdultsForThree(), @noOfKidsForThree(), @noOfAdultsForTwo()]
+      threeDays = [@noOfAdultsForThreeDays(), @noOfKidsForThreeDays()]
+
+      if @sumOf(twoDays) > 0
+        type.push("2D1N")
+      else if @sumOf(threeDays) > 0
+        type.push("3D2N")
+
+      type.join(" & ")
+
     @canBook = ko.computed =>
       @price() != 0 && @availableDate()
 
   book: ->
-    console.log "book now"
+    param = $.param @_buildParams()
+    window.location.href = "bookings/new?#{param}"
+
+  sumOf: (arr) ->
+    arr = _.chain(arr)
+          .map (elem) -> Number(elem)
+          .sum()
+          .value()
+
+  _buildParams: ->
+    noOfAdults = [@noOfAdultsForMany(), @noOfAdultsForThree(), @noOfAdultsForTwo(), @noOfAdultsForThreeDays()]
+    noOfKids = [@noOfKidsForMany(), @noOfAdultsForThree(), @noOfKidsForThreeDays()]
+    {
+      price: @price()
+      noOfAdults: @sumOf noOfAdults
+      noOfKids: @sumOf noOfKids
+      type: @type()
+    }
 
 $(document).ready =>
   ko.applyBindings(new ViewModel())
