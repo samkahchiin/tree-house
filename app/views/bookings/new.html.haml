@@ -2,25 +2,25 @@
   %div#booking-form
     = form_tag "/bookings", method: "post"  do
       .form-group
-        = label_tag :name
+        %label Name | 名字
         %br
         = text_field_tag :name , nil, required: true
       .form-group
-        = label_tag :mobile, "mobile phone no (format is +601XXXXXXXX OR 601XXXXXXXX)"
+        %label Mobile No | 聯絡號碼 (+601XXXXXXXX OR 601XXXXXXXX)
         %br
         = phone_field_tag :mobile , nil, required: true, pattern: "^(\+?)(601)(\d{8})$"
       .form-group
-        = label_tag :email
+        %label Email | 郵箱
         %br
         = email_field_tag :email , nil, required: true
       .form-group
         .row
           .col-md-6
-            = label_tag :backup_date_1
+            %label Backup Date 1 | 備份日期 1
             %br
             = text_field_tag :backup_date_1, nil, class: "datepicker", required: true
           .col-md-6
-            = label_tag :backup_date_2
+            %label Backup Date 2 | 備份日期 2
             %br
             = text_field_tag :backup_date_2, nil, class: "datepicker", required: true
 
