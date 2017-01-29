@@ -34,11 +34,16 @@ class BookingsController < ApplicationController
     if @bill.success?
       get_bill
       # NOTE: redirect to the bill page to make payment
-      redirect_to @successful_bil['url'] if Booking.create booking_params
+      if Booking.create modified_booking_params
+        redirect_to @successful_bil['url'] 
+      else
+        redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
+      end
+    else
+      redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
     end
     # TODO: redirect_to new booking page
     # TODO: Fetch the error message from bill
-    redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
   end
 
   def get_bill
@@ -51,6 +56,16 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.permit(:name, :mobile, :email, :no_of_adults, :no_of_kids, :trip_type, :price, :date, :backup_date_1, :backup_date_2, :chosen_date)
+  end
+
+  def modified_booking_params
+    date_params = [ "date", "backup_date_1", "backup_date_2" ]
+    modified_booking_params = booking_params
+    date_params.each do |key|
+      val = modified_booking_params[key]
+      modified_booking_params[key] = Date.parse(val) if val
+    end
+    modified_booking_params
   end
 
   def success_booking?
