@@ -14,9 +14,9 @@ class BookingsController < ApplicationController
     date         = params[:date]
     no_of_kids   = params[:no_of_kids]
     no_of_adults = params[:no_of_adults]
-    type         = params[:type]
+    trip_type    = params[:trip_type]
 
-    description = "Tree house booking on #{date} for #{no_of_adults} adult(s) and #{no_of_kids} kid(s) for #{type}"
+    description = "#{date} - #{trip_type}: #{no_of_adults} adult(s) and #{no_of_kids} kid(s)"
     callback_url = request.base_url
 
     # TODO: Refactor this and ways to write description
