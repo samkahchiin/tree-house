@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170129040947) do
     t.date     "date",          null: false
     t.date     "backup_date_1", null: false
     t.date     "backup_date_2", null: false
-    t.date     "chosen_date",   null: false
+    t.date     "chosen_date"
   end
 
 end

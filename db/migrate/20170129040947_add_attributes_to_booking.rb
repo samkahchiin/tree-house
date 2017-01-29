@@ -21,6 +21,5 @@ class AddAttributesToBooking < ActiveRecord::Migration
     change_column :bookings, :backup_date_2, :date, null: false
 
     add_column :bookings, :chosen_date, :date
-    change_column :bookings, :chosen_date, :date, null: false
   end
 end

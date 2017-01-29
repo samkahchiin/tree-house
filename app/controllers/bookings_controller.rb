@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
                     description: description,
                     collection_id: ENV['COLLECTION_ID'],
                     callback_url: callback_url,
-                    amount: params[:price]
+                    amount: params[:price].to_i * 100
                   }
 
     @bill = Billplz::Bill.new bill_params
