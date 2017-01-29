@@ -34,10 +34,12 @@ class BookingsController < ApplicationController
     if @bill.success?
       get_bill
       # NOTE: redirect to the bill page to make payment
-      if Booking.create booking_params
+      booking = Booking.create booking_params
+      if booking
         redirect_to @successful_bil['url']
       else
-        redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
+        flash[:alert] = booking.errors.full_messages.join(', ')
+        redirect_to new_booking_path
       end
     else
       error_message = JSON.parse(@bill.response.body)["error"]["message"].join(" ")
