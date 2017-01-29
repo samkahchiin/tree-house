@@ -19,6 +19,7 @@
 #= require util
 #= require turbolinks
 #= require knockout
+#= require lodash.min
 #= require dropdowns
 #= require bookings
 #= require_tree .

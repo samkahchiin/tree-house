@@ -2,7 +2,6 @@
   border: 1px solid #ccc;
   border-radius: 3px;
   overflow: hidden;
-  background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
   margin:3px;
 }
 
@@ -27,14 +26,6 @@
 .total-price {
   border-top: 2px solid #c1bbbb;
   margin: 10px 0px;
-}
-
-.total-price-text {
-  float: left;
-}
-
-.total-price-amount {
-  float: right;
 }
 
 .booking .btn-danger {

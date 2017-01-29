@@ -1,6 +1,3 @@
 class Booking < ActiveRecord::Base
-  validates_presence_of :name
-  validates_presence_of :identification_no
-  validates_presence_of :phone_no
-  validates_presence_of :email
+  validates_presence_of :name, :mobile, :email, :no_of_adults, :trip_type, :price, :date, :backup_date_1, :backup_date_2
 end

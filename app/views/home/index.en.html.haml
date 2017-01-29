@@ -171,16 +171,16 @@
     .row.booking
       .col-md-3.col-md-offset-9
         .total-price
-          %span.total-price-text Total Price: RM
-          %span.total-price-amount(data-bind="text: price")
+          %span.total-price-text.left-col Total Price: RM
+          %span.total-price-amount.right-col(data-bind="text: price")
 
     .row.booking-date-row
       .col-md-3.col-md-offset-9
-        %input.datepicker.booking-date{type: "text", placeholder: "Your available date"}
+        %input.datepicker.booking-date{type: "text", placeholder: "Your available date", "data-bind": "value: availableDate"}
 
     .row.booking
       .col-md-3.col-md-offset-9
-        .btn.btn-danger Book Now
+        %button.btn.btn-danger(data-bind="enable: canBook, click: book") Book Now
 
 %section#contact.main.style3.secondary
   .content
@@ -213,3 +213,5 @@
           %li +6016-3823145  Star Lim
           %li +6010-2466123  Michelle
           %li +6016-7560086  Yu Ru
+
+= render "home/shared/gallery_plugin"
