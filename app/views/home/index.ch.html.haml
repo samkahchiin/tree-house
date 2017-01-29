@@ -90,6 +90,100 @@
     / Gallery
     = render "home/shared/photo"
 
+%section#booking.main.style3.primary
+  .content
+    %header
+      %h2 預約
+    .row
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 四人或以上(2天1夜)
+              %h4.card-text Max: 12
+            .row
+              .col-md-8
+                %h4.price-text RM100/成人
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForMany, options: optionsForMany")
+            .row
+              .col-md-8
+                %h4.price-text RM60/小孩
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForMany, options: optionsForMany")
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 三人(2天1夜)
+              %h4.card-text Max:3
+            .row
+              .col-md-8
+                %h4.price-text RM110/成人
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForThree, options: optionsForThree")
+            .row
+              .col-md-8
+                %h4.price-text RM60/小孩
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForThree, options: optionsForThree")
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 二人或以下(2天1夜)
+              %h4.card-text Max: 2
+            .row
+              .col-md-8
+                %h4.price-text RM130/成人
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForTwo, options: optionsForTwo")
+            .row
+
+      .col-md-3.room
+        .card
+          %img.card-img-top.responsive-img{src: "https://res.cloudinary.com/samkahchiin/image/upload/v1481643298/2_vdrkmk.jpg"}
+          .card-content
+            .card-block
+              %p.card-title 四人或以上(3天2夜)
+              %h4.card-text Max: 12
+            .row
+              .col-md-8
+                %h4.price-text RM180/成人
+              .col-md-4
+                .select-style
+                  %select.no-of-adults(data-bind="value: noOfAdultsForThreeDays, options: optionsForMany")
+            .row
+              .col-md-8
+                %h4.price-text RM100/小孩
+              .col-md-4
+                .select-style
+                  %select.no-of-kids(data-bind="value: noOfKidsForThreeDays, options: optionsForMany")
+
+    .row.booking
+      .col-md-3.col-md-offset-9
+        .total-price
+          %span.total-price-text.left-col Total Price: RM
+          %span.total-price-amount.right-col(data-bind="text: price")
+
+    .row.booking-date-row
+      .col-md-3.col-md-offset-9
+        %input.datepicker.booking-date{type: "text", placeholder: "Your available date", "data-bind": "value: availableDate"}
+
+    .row.booking
+      .col-md-3.col-md-offset-9
+        %button.btn.btn-danger(data-bind="enable: canBook, click: book") Book Now
+
 %section#contact.main.style3.secondary
   .content
     %header
