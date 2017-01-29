@@ -40,10 +40,10 @@ class BookingsController < ApplicationController
         redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
       end
     else
-      redirect_to new_booking_path, alert: 'Something is wrong. Please fill in the form with correct information.'
+      error_message = JSON.parse(@bill.response.body)["error"]["message"].join(" ")
+      flash[:alert] = error_message
+      redirect_to new_booking_path
     end
-    # TODO: redirect_to new booking page
-    # TODO: Fetch the error message from bill
   end
 
   def get_bill

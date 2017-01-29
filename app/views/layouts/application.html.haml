@@ -11,6 +11,10 @@
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.22.0/css/blueimp-gallery.min.css", :rel => "stylesheet"}
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}
   %body
+    .container
+      .row
+      - if flash[:alert]
+        .alert.alert-success.notice= flash[:alert]
     = yield
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.22.0/js/blueimp-gallery.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"}
