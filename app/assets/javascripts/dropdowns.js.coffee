@@ -58,7 +58,7 @@ class ViewModel
       price: @price()
       no_of_adults: @sumOf noOfAdults
       no_of_kids: @sumOf noOfKids
-      type: @type()
+      trip_type: @type()
       date: @availableDate()
     }
 

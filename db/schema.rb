@@ -11,14 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104085932) do
+ActiveRecord::Schema.define(version: 20170129040947) do
 
   create_table "bookings", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "mobile",     null: false
-    t.string   "email",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",          null: false
+    t.string   "mobile",        null: false
+    t.string   "email",         null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "no_of_adults",  null: false
+    t.integer  "no_of_kids"
+    t.string   "trip_type",     null: false
+    t.integer  "price",         null: false
+    t.date     "date",          null: false
+    t.date     "backup_date_1", null: false
+    t.date     "backup_date_2", null: false
+    t.date     "chosen_date",   null: false
   end
 
 end

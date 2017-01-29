@@ -27,7 +27,7 @@
       %input{type: "hidden", value: "#{@no_of_adults}", name: "no_of_adults"}
       %input{type: "hidden", value: "#{@no_of_kids}", name: "no_of_kids"}
       %input{type: "hidden", value: "#{@price}", name: "price"}
-      %input{type: "hidden", value: "#{@type}", name: "type"}
+      %input{type: "hidden", value: "#{@trip_type}", name: "trip_type"}
       %input{type: "hidden", value: "#{@date}", name: "date"}
 
       .row
@@ -44,7 +44,7 @@
         .col-md-3.col-md-offset-9
           .type
             %span.left-col Type of stay:
-            %span.right-col= @type
+            %span.right-col= @trip_type
       .row
         .col-md-3.col-md-offset-9
           .type
