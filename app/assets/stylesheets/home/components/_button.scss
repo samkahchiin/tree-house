@@ -19,13 +19,14 @@
 		color: _palette(accent1, fg);
 		cursor: pointer;
 		display: inline-block;
-		height: 3.5em;
-		line-height: 3.5em;
+		height: 2em;
+		line-height: 2em;
 		outline: 0;
 		padding: 0 2em 0 2em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
+    margin: 10px;
 
 		&.down {
 			width: 5em;
