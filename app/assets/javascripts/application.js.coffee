@@ -22,4 +22,5 @@
 #= require lodash.min
 #= require dropdowns
 #= require bookings
+#= require google_map
 #= require_tree .
