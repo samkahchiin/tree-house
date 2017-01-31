@@ -17,9 +17,9 @@
 #= require jquery.scrollex.min
 #= require jquery.scrolly.min
 #= require util
-#= require turbolinks
 #= require knockout
 #= require lodash.min
 #= require dropdowns
 #= require bookings
+#= require google_map
 #= require_tree .

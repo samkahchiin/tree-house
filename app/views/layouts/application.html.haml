@@ -6,7 +6,7 @@
     %meta{:charset => "utf-8"}/
     %title TreeHouse
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.22.0/css/blueimp-gallery.min.css", :rel => "stylesheet"}
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}
@@ -20,5 +20,4 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"}
     = render "/home/shared/footer"
-    = render "home/shared/google_map_plugin"
-    %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3km2EhmwnSgkQTxowIOAdns6Q4AuF-6w&callback=initMap"}
+    %script{:defer => "defer", :async => "", src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3km2EhmwnSgkQTxowIOAdns6Q4AuF-6w&callback=initMap"}
