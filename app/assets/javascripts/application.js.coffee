@@ -17,7 +17,6 @@
 #= require jquery.scrollex.min
 #= require jquery.scrolly.min
 #= require util
-#= require turbolinks
 #= require knockout
 #= require lodash.min
 #= require dropdowns
